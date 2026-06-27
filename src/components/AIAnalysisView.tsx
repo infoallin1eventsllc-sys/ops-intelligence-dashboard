@@ -89,7 +89,7 @@ export default function AIAnalysisView({ events, clients, vendors, addActivity }
     } catch (err) {
       if (err instanceof Error && err.name === 'AbortError') return;
       const msg = err instanceof Error ? err.message : 'Unknown error';
-      setError(`Could not reach the AI engine: ${msg}. Ensure the server is running and ANTHROPIC_API_KEY is set.`);
+      setError(`Could not reach the AI engine: ${msg}. Ensure the server is running with \`npm run dev\`.`);
     } finally {
       setIsStreaming(false);
     }
